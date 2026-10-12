@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReadyUp — Privacy Policy</title>
+<meta name="description" content="Privacy policy for ReadyUp, a Windows workspace launcher by Jotech. ReadyUp works fully offline and collects no personal data.">
+<style>
+  :root{
+    --bg:#0E1014; --panel:#15181D; --card:#171A20; --line:#242A33; --line2:#2C313B;
+    --text:#ECEEF2; --muted:#A3AAB7; --faint:#7D8594; --accent:#C6F24E; --accent-ink:#D7F96E;
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,"Noto Sans Arabic",sans-serif;
+    line-height:1.65; font-size:17px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent-ink)}
+  a:hover{color:var(--accent)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  header.top{
+    position:sticky;top:0;z-index:5;background:rgba(14,16,20,.82);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{max-width:820px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:14px 20px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:650;font-size:17px;letter-spacing:-.01em}
+  .brand b{font-weight:800}
+  .brand .up{color:var(--accent)}
+  .langs{margin-inline-start:auto;display:flex;gap:6px}
+  .langs button{
+    font:inherit;font-size:14px;cursor:pointer;color:var(--muted);
+    background:transparent;border:1px solid var(--line2);border-radius:999px;padding:6px 14px;
+  }
+  .langs button:hover{color:var(--text);background:var(--card)}
+  .langs button[aria-pressed="true"]{color:var(--bg);background:var(--accent);border-color:var(--accent);font-weight:650}
+
+  .hero{padding:56px 0 20px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+  h1{font-size:40px;line-height:1.1;letter-spacing:-.02em;margin:12px 0 10px;font-weight:800}
+  .updated{color:var(--faint);font-size:14.5px}
+  .lead{color:var(--muted);font-size:19px;margin-top:18px}
+
+  .tldr{
+    margin:26px 0 8px;padding:18px 20px;border-radius:var(--radius);
+    background:linear-gradient(180deg,rgba(198,242,78,.08),rgba(198,242,78,.03));
+    border:1px solid rgba(198,242,78,.28);
+  }
+  .tldr b{color:var(--text)}
+  .tldr p{margin:0;color:var(--muted)}
+
+  section.block{margin-top:34px}
+  h2{font-size:22px;letter-spacing:-.01em;margin:0 0 10px;font-weight:750}
+  p{margin:0 0 14px;color:var(--muted)}
+  p.body{color:#CDD2DB}
+  ul{margin:0 0 14px;padding-inline-start:22px;color:var(--muted)}
+  li{margin:7px 0}
+  strong{color:var(--text);font-weight:650}
+  code{font-family:"Cascadia Mono",Consolas,ui-monospace,monospace;font-size:14.5px;background:var(--card);border:1px solid var(--line2);border-radius:6px;padding:2px 7px;color:#DCE1E9}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:0 0 14px}
+  .card h2{margin-bottom:6px}
+  footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);color:var(--faint);font-size:14.5px}
+  footer a{color:var(--muted)}
+
+  /* language visibility */
+  [data-lang]{display:none}
+  [data-lang].active{display:block}
+  html[dir="rtl"] .wrap,html[dir="rtl"] body{direction:rtl}
+  html[dir="rtl"] ul{padding-inline-start:22px}
+  html[dir="rtl"] .langs{margin-inline-start:auto}
+  @media (max-width:560px){ h1{font-size:32px} body{font-size:16px} .lead{font-size:17px} }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <span class="brand" aria-label="ReadyUp">
+      <svg viewBox="0 0 100 100" width="26" height="26" aria-hidden="true">
+        <rect width="100" height="100" rx="24" fill="#1B1E24"></rect>
+        <rect x="34" y="16" width="48" height="30" rx="8" fill="#3B4250"></rect>
+        <rect x="26" y="27" width="56" height="34" rx="9" fill="#687387"></rect>
+        <rect x="18" y="40" width="64" height="42" rx="11" fill="#C6F24E"></rect>
+        <path d="M44 51L44 71L61 61Z" fill="#1B1E24"></path>
+      </svg>
+      <span><b>Ready</b><b class="up">Up</b></span>
+    </span>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" id="btn-en" aria-pressed="true" onclick="setLang('en')">English</button>
+      <button type="button" id="btn-ar" aria-pressed="false" onclick="setLang('ar')">العربية</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ============================ ENGLISH ============================ -->
+<div data-lang="en" class="active">
+  <div class="hero">
+    <div class="eyebrow">ReadyUp</div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: 12 October 2026</div>
+    <p class="lead">ReadyUp is a Windows workspace launcher. It runs entirely on your PC, works
+      offline, and <strong>does not collect, transmit, or sell any personal data</strong>.</p>
+  </div>
+
+  <div class="tldr">
+    <p><b>In short:</b> No account. No tracking. No ads. No analytics. Everything you create in
+      ReadyUp stays on your own computer.</p>
+  </div>
+
+  <section class="block">
+    <h2>What data we collect</h2>
+    <p class="body"><strong>None.</strong> ReadyUp does not collect personal information. There is no
+      sign-up, no account, and no login. We do not use analytics, advertising, tracking, or
+      telemetry of any kind.</p>
+  </section>
+
+  <section class="block">
+    <h2>What stays on your device</h2>
+    <p class="body">The workspaces, automatic triggers, and settings you create are saved locally on
+      your PC, in your own user folder (<code>%AppData%\ReadyUp</code>). This information never leaves
+      your computer and is never sent to us or to anyone else. You can delete it at any time by
+      removing that folder or uninstalling the app.</p>
+  </section>
+
+  <section class="block">
+    <h2>How ReadyUp uses your computer</h2>
+    <p class="body">To do its job, ReadyUp works with your PC locally — and only with what you set
+      up:</p>
+    <ul>
+      <li>It opens the apps, folders, files, websites and commands you add to a workspace.</li>
+      <li>It can close apps you choose, to free memory, after asking you first.</li>
+      <li>It reads the list of installed apps and open windows on your PC so it can show them to you
+        and act on them. This information is used on your device only and is never transmitted.</li>
+      <li>When you open websites, ReadyUp hands them to your browser. It does not read your browsing
+        history or the contents of any page.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Network and the internet</h2>
+    <p class="body">ReadyUp works fully offline and makes no network connections of its own. App
+      updates are delivered through the Microsoft Store in the normal way.</p>
+  </section>
+
+  <section class="block">
+    <h2>Third parties</h2>
+    <p class="body">ReadyUp does not share data with any third party, because it does not collect any.
+      It contains no third-party advertising or analytics code.</p>
+  </section>
+
+  <section class="block">
+    <h2>Children</h2>
+    <p class="body">ReadyUp is a general-purpose productivity tool and does not knowingly collect any
+      information from anyone, including children.</p>
+  </section>
+
+  <div class="card" style="margin-top:34px">
+    <h2>Contact</h2>
+    <p class="body" style="margin:0">Questions about this policy or ReadyUp? Email
+      <a href="mailto:haymohsen@gmail.com">haymohsen@gmail.com</a>.</p>
+  </div>
+
+  <section class="block">
+    <h2>Changes to this policy</h2>
+    <p class="body">If this policy changes, the updated version will be posted on this page with a new
+      date at the top.</p>
+  </section>
+
+  <footer>
+    ReadyUp is developed and published by <strong>Jotech</strong> (Prof. Hani Muhsen).
+    © 2026 Jotech. All rights reserved.
+  </footer>
+</div>
+
+<!-- ============================ ARABIC ============================ -->
+<div data-lang="ar">
+  <div class="hero">
+    <div class="eyebrow">ReadyUp</div>
+    <h1>سياسة الخصوصية</h1>
+    <div class="updated">آخر تحديث: 12 أكتوبر 2026</div>
+    <p class="lead">ReadyUp هو مُشغّل مساحات عمل لنظام Windows. يعمل بالكامل على جهازك وبدون إنترنت،
+      و<strong>لا يجمع أو يرسل أو يبيع أي بيانات شخصية</strong>.</p>
+  </div>
+
+  <div class="tldr">
+    <p><b>باختصار:</b> لا حساب. لا تتبّع. لا إعلانات. لا تحليلات. كل ما تنشئه في ReadyUp يبقى على
+      جهازك أنت.</p>
+  </div>
+
+  <section class="block">
+    <h2>ما البيانات التي نجمعها</h2>
+    <p class="body"><strong>لا شيء.</strong> لا يجمع ReadyUp أي معلومات شخصية. لا يوجد تسجيل ولا حساب
+      ولا تسجيل دخول. ولا نستخدم أي تحليلات أو إعلانات أو تتبّع من أي نوع.</p>
+  </section>
+
+  <section class="block">
+    <h2>ما الذي يبقى على جهازك</h2>
+    <p class="body">تُحفَظ مساحات العمل وقواعد التشغيل التلقائي والإعدادات التي تنشئها محليًا على جهازك،
+      داخل مجلّد المستخدم الخاص بك (<code>%AppData%\ReadyUp</code>). هذه المعلومات لا تغادر جهازك أبدًا
+      ولا تُرسَل إلينا أو إلى أي جهة أخرى. يمكنك حذفها في أي وقت بإزالة ذلك المجلّد أو إلغاء تثبيت
+      التطبيق.</p>
+  </section>
+
+  <section class="block">
+    <h2>كيف يستخدم ReadyUp جهازك</h2>
+    <p class="body">لكي يؤدّي عمله، يتعامل ReadyUp مع جهازك محليًا — وفقط مع ما تُعدّه أنت:</p>
+    <ul>
+      <li>يفتح التطبيقات والمجلّدات والملفات والمواقع والأوامر التي تضيفها إلى مساحة العمل.</li>
+      <li>يمكنه إغلاق التطبيقات التي تختارها لتحرير الذاكرة، بعد أن يسألك أولًا.</li>
+      <li>يقرأ قائمة التطبيقات المثبّتة والنوافذ المفتوحة على جهازك ليعرضها لك ويتعامل معها. تُستخدَم
+        هذه المعلومات على جهازك فقط ولا تُرسَل أبدًا.</li>
+      <li>عند فتح المواقع، يُسلّمها ReadyUp إلى متصفّحك. وهو لا يقرأ سجلّ تصفّحك ولا محتوى أي صفحة.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>الشبكة والإنترنت</h2>
+    <p class="body">يعمل ReadyUp بالكامل دون إنترنت ولا يُجري أي اتصالات شبكية من تلقاء نفسه. وتصل
+      تحديثات التطبيق عبر متجر Microsoft بالطريقة المعتادة.</p>
+  </section>
+
+  <section class="block">
+    <h2>الأطراف الثالثة</h2>
+    <p class="body">لا يشارك ReadyUp أي بيانات مع أي طرف ثالث، لأنه لا يجمع أي بيانات أصلًا. ولا يحتوي
+      على أي شيفرة إعلانات أو تحليلات من أطراف أخرى.</p>
+  </section>
+
+  <section class="block">
+    <h2>الأطفال</h2>
+    <p class="body">ReadyUp أداة إنتاجية عامة، ولا يجمع عن قصد أي معلومات من أي شخص، بما في ذلك
+      الأطفال.</p>
+  </section>
+
+  <div class="card" style="margin-top:34px">
+    <h2>التواصل</h2>
+    <p class="body" style="margin:0">لأي سؤال عن هذه السياسة أو عن ReadyUp، راسلنا على
+      <a href="mailto:haymohsen@gmail.com">haymohsen@gmail.com</a>.</p>
+  </div>
+
+  <section class="block">
+    <h2>تغييرات هذه السياسة</h2>
+    <p class="body">إذا تغيّرت هذه السياسة، ستُنشَر النسخة المحدّثة على هذه الصفحة مع تاريخ جديد في
+      الأعلى.</p>
+  </section>
+
+  <footer>
+    يطوّر ReadyUp ويَنشره <strong>Jotech</strong> (أ.د. هاني محسن).
+    © 2026 Jotech. جميع الحقوق محفوظة.
+  </footer>
+</div>
+
+</div>
+
+<script>
+  function setLang(lang){
+    var en = lang === 'en';
+    document.documentElement.lang = lang;
+    document.documentElement.dir = en ? 'ltr' : 'rtl';
+    document.querySelectorAll('[data-lang]').forEach(function(el){
+      el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+    });
+    document.getElementById('btn-en').setAttribute('aria-pressed', en ? 'true' : 'false');
+    document.getElementById('btn-ar').setAttribute('aria-pressed', en ? 'false' : 'true');
+    try { history.replaceState(null, '', '#' + lang); } catch(e){}
+  }
+  if (location.hash === '#ar') setLang('ar');
+</script>
+</body>
+</html>
